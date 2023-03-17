@@ -1,38 +1,75 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card{
+  display: flex;
+  flex-direction: column;
+  margin-bottom:3%;
+  border: 2px solid lightblue;
+  width: 50%;
 }
+.actionsWrapper{
+  background-color: lavender;
+  display: flex;
+  width: 30%;
+  margin: auto;
+  align-items: center;
+  justify-content: space-between;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+}
+.liked{
+  background-color: red;
+  width: 49%;
+  cursor: pointer;
+}
+@keyframes animationL {
+  0% {
+    transform: scale(1);
   }
+  25% {
+    transform: scale(1.3);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+  
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@keyframes animationD {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.3);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+  
+}
+.like{
+  animation: animationL 1s ease-in-out ;
+}
+.unlike{
+  animation: animationD 1s ease-in-out;
+}
+.dis{
+  background-color: wheat;
+  width: 49%;
+  cursor: pointer;
+}
+.delete{
+  width: 49%;
+  background-color: wheat;
+  cursor: pointer;
+}
+.cardsWrapper{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
